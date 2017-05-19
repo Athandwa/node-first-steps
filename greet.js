@@ -1,11 +1,17 @@
- const assert = require('assert');
-// after you declared the function
-function greet(name) {
-  return "Hi" + name;
+//  const assert = require('assert');
+// // after you declared the function
+// function greet(name) {
+//   return "Hi" + name;
+// }
+// // console.log(greet(' Bob'));
+//  assert.equal(greet(' Bob'), 'Hi Bob');
+//
+//
+// var msg = greet(" Xola");
+// console.log(msg);
+module.exports = function(name){
+    return 'Hi ' + name;
 }
-// console.log(greet(' Bob'));
- assert.equal(greet(' Bob'), 'Hi Bob');
+const greet = require('./greet');
 
-
-var msg = greet(" Xola");
-console.log(msg);
+console.log(greet(' Xola'))
